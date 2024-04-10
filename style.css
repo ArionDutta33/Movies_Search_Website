@@ -43,6 +43,10 @@
 
  .form-search-btn {
      padding: .7rem .7rem;
-     background: #ffb703;
      font-size: 1.1rem;
+ }
+
+ .main-container {
+     margin-left: 3rem;
+     margin-right: 3rem;
  }
