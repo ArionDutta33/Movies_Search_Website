@@ -13,8 +13,12 @@ const getMovies = async (SearchItem) => {
 <div class="genre"><strong>Genre: </strong>${response.Genre}</div></div>`
 
 }
-form.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     const movie = document.querySelector("form input");
-    getMovies(movie.value.trim())
+    if (movie.value === "") {
+        alert("Cannot be empty")
+    } else {
+        getMovies(movie.value.trim())
+    }
 })
