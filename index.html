@@ -4,31 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies Search</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- cdn -->
+    <title>Document</title>
+    <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="navbar">
-        <p class="text">Movies Guide App</p>
-        <div class="search-from">
-            <form action="#">
-                <input type="text" class="formInput" placeholder="Search Movies">
-                <button class="form-search-btn">Search</button>
+    <div class="container text-white bg-black w-full h-full">
+        <div class="navbar border-b-2 px-6 py-4">
+            <div class="logo font-extrabold text-xl">
+                <span class="text-white">Movies</span>
+                <span class="text-yellow-500">CO.</span>
+            </div>
+        </div>
+        <div class="searchBar    space-y-4 flex flex-col items-center justify-center py-4">
+            <form action=""><input type="text" class="px-4 py-2 text-black rounded-md" placeholder="Search movies ...">
+                <button class="text-xs px-8   py-2 rounded-md searchBtn active:bg-blue-700 bg-blue-500">Search</button>
             </form>
         </div>
-    </div>
-    <div class="main-container">
+        <div class="detailsContainer">
+            <div class="detailBox">
+                <div class="img-container   flex item-center justify-center ">
+                    <img src="https://th.bing.com/th?id=OIP.NqFYgMiuHbc_byT2CPCHAgHaJ8&w=215&h=289&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                        class="h-96 w-72 rounded-md" alt="">
+                </div>
+                <div class="title text-yellow-500 font-bold text-3xl text-center py-4">
+                    Avatar
+                </div>
+                <div class="year  text-xs text-center">
+                    <span class="font-bold "> Year:</span>
+                    2016 <span class="font-bold">Ratings: </span>PG-13 <span class="font-bold"> Released :</span> 26
+                    February 2016
+                </div>
+                <div class="genre flex items-center py-2 justify-center text-center  ">
+                    <div class="wrapper border-[.2px] px-4 bg-gray-800 "><span class="font-bold">Genre:</span>
+                        Action, Adventure
+                    </div>
+                </div>
+                <div class="writers   text-center">
+                    <span class="font-bold">Writer :</span> Max Werner
+                </div>
+                <div class="actors  text-center"><span class="font-bold">Actors :</span> Joquain Phoenix</div>
+                <div class="plot text-center py-4"><span class="font-bold text-yellow-500">Plot</span> Lorem ipsum,
+                    dolor sit
+                    amet
+                    consectetur adipisicing elit. Ad repellendus at cupiditate consectetur obcaecati, quo labore itaque
+                    consequuntur quasi et.
+                </div>
 
+
+            </div>
+            <div class="footer py-6 px-4 flex items-center justify-center    bg-slate-600">
+                <div class="socials flex  space-x-8 gap-4 text-xs">
+                    <a href="">Github <i class="fa-brands fa-square-github"></i></a>
+                    <a href="">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="">Discord <i class="fa-brands fa-discord"></i></a>
+
+                </div>
+
+            </div>
+        </div>
     </div>
-    <div class="footer">
-        Made with &hearts;
     </div>
-    <script src="app.js"></script>
 </body>
 
 </html>
