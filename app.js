@@ -1,5 +1,34 @@
+const form = document.querySelector("form")
+const title = document.querySelector(".title")
+const image = document.querySelector("img")
+const year = document.querySelector(".y-date")
+const ratings = document.querySelector(".r-rating")
+const date = document.querySelector(".r-y-date")
+const genre = document.querySelector(".r-genre")
+const writer = document.querySelector(".r-writer")
+const actors = document.querySelector(".r-actors")
+const plot = document.querySelector(".r-plot")
+const fetchData = async (searchItem) => {
+    const apikey = "a4a68f50";
+    const data = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&t=${searchItem}`);
+    const response = await data.json()
+    console.log(response)
+    title.innerHTML = response.Title;
+    image.setAttribute("src", response.Poster)
+    year.innerHTML = response.Year
+    ratings.innerHTML = response.Rated
+    data.innerHTML = response.Released
+    genre.innerHTML = response.Genre
+    writer.innerHTML = response.Writer
+    actors.innerHTML = response.Actors
+    plot.innerHTML = response.Plot
+}
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchItem = document.querySelector("input").value
+    fetchData(searchItem)
 
-
+})
 
 
 
